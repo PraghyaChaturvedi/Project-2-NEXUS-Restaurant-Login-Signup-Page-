@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        *{
+        padding: 0;
+        margin: 0;
+        border: none;
+        }
+
+        
+
+        .MainContainer{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .innerContainer{ 
+            height: 500px;
+            width: 750px;
+            background-color: white;
+            display: flex;
+        }
+
+        /* 1st section  */
+
+        .dataSec{
+            height: 500px;
+            width: 330px;
+            text-align: center;
+        }
+
+        .dataSec2{
+            height: 500px;
+            width: 330px;
+            text-align: center;
+        }
+
+        .smallText{
+            color:rgb(173, 169, 169);
+        }
+
+        /* inner text */
+        .resturantName{
+            margin-top: 45px;
+        }
+
+        .grettings{
+            margin-top: 15px;
+        }
+
+        .smallText{
+            margin-bottom: 30px;
+            margin-top: 5px;
+        }
+
+        /* input box */
+        .data{
+            height: 50px;
+            width: 280px;
+            border: 0.5px solid rgb(173, 169, 169);
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .data:focus{
+            outline :none;  
+        }
+
+        .data:hover{ 
+            border: 2px solid rgb(0, 156, 0);
+            
+        }
+
+        /* Button decor */
+        .btn {
+            height: 35px;
+            width: 100px;
+            background-color: rgb(0, 156, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btnAlign{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btnText{
+            color: white;
+        }
+
+        /* last text */
+        .secondJump{
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        /* image */
+        .imageVisible{
+            height: 500px;
+            width: 420px;
+            background-image: url("/images/side_img.png");
+            position: fixed;
+        }
+
+        .hider{
+            display: none;
+        }
+
+        body{
+            background-image: url("/images/background_img.png");
+        }
+
+        .btn2{
+            height: 35px;
+            width: 100px;
+            background-color: rgb(0, 156, 0);
+        }
+       
+    </style>
+</head>
+<body>
+    
+    <form action="/signup" method="post">
+    
+    <div class="MainContainer">
+
+        <div class="innerContainer">
+
+            <!-- Creating Login Side -->
+
+            {{!-- <div class="dataSec hider">
+                <h2 class="resturantName">Resturant Name</h2>
+                <h3 class="grettings">Welcome Back!</h3>
+                <p class="smallText">Sign in with your Email and Password</p>
+                <input type="text" placeholder="   Name"  name="name" class="data"  >
+                <input type="password" placeholder="   Password" class="data" name="password">
+
+                <div class="btnAlign">
+                    <div class="btn">  
+                        <div class="btnText">
+                            Login
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="secondJump">
+                    <p>Don't have account ?<a href="/signup">SignUp</a></p>
+                </div>
+            </div> --}}
+
+
+
+            <!-- Sign Up Section -->
+
+            <div class="dataSec2 ">
+                <h2 class="resturantName">Resturant Name</h2>
+                <h3 class="grettings">Exicited to Feed You !</h3>
+                <p class="smallText">Enter your information so that we can help you</p>
+                <input type="text" placeholder="   Name"   class="data" name="name">
+                <input type="email" placeholder="   Email"  class="data" name="email"> 
+                <input type="password" placeholder="   Set Password" class="data" name="password">
+
+                <div class="btnAlign">
+                    <div class="btn">  
+                        <div class="btnText">
+                            <button type="submit" class="btn2">SignUp</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+                {{!-- <div class="secondJump signup">
+                    <p>Already Having a account ? <a href="/login">Login</a></p>
+                </div> --}}
+            </div>
+
+
+
+
+            <!-- Image Section -->
+
+            <div class="image">
+                <div class="imageVisible">
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    </form>
+
+    
+
+</body>
+</html>
